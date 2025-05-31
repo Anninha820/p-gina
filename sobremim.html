@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Mim - Anna Clara</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color: #e3f2fd;
+      --card-color: #ffffff;
+      --text-color: #333333;
+      --title-color: #1976d2;
+      --button-bg: #1976d2;
+      --button-hover: #0d47a1;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --card-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --title-color: #90caf9;
+      --button-bg: #90caf9;
+      --button-hover: #64b5f6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card {
+      background-color: var(--card-color);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 750px;
+      width: 95%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
+      margin: 20px;
+      transition: background 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: block;
+    }
+
+    h1, h2 {
+      color: var(--title-color);
+      text-align: center;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .button, .toggle-mode {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .button a,
+    .toggle-mode button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: var(--button-bg);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .button a:hover,
+    .toggle-mode button:hover {
+      background-color: var(--button-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="IMG-20250516-WA0002.jpg" alt="Minha Foto" class="profile-img" />
+    <h1>Anna Clara</h1>
+    <p style="text-align: center;"><strong>Idade:</strong> 17 anos</p>
+
+    <div class="section">
+      <h2>Escola</h2>
+      <p>Estudo no Colégio da Polícia Militar do Paraná, onde curso o 3º ano do ensino médio.</p>
+      <p>Tenho interesse especial por matemática, ciências e tecnologia.</p>
+      <p>Quero me formar em Ciência da Computação.</p>
+    </div>
+
+    <div class="section">
+      <h2>Família</h2>
+      <p>Moro com meus pais,uma irmã mais nova e um cachorro.</p>
+    </div>
+
+    <div class="section">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Jogar Handebol, Voleibol, Futsal e Xadrez.</li>
+        <li>Tocar Flauta Transversal, Violão e Guitarra.</li>
+        <li>Ler livros e assistir filmes e séries.</li>
+        <li>Andar de patins e bicicleta.</li>
+        <li>Correr e fazer academia.</li>
+        <li>Aprender programação e robótica</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Contato e Redes</h2>
+      <ul>
+        <li><strong>Email:</strong> annaclaraaraujoribeiro@gmail.com</li>
+        <li><strong>Instagram:</strong> @annaclaraaraujoribeiro</li>
+      </ul>
+    </div>
+
+    
+    <div class="toggle-mode">
+      <button onclick="toggleDarkMode()">🌙 Alternar Modo Escuro</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
